@@ -23,7 +23,12 @@ app.set('view engine', 'handlebars');
 mongoose.Promise = global.Promise;
 //connecting to MongoDB
 //mongoose.connect('mongodb://localhost/dbNews');
-mongoose.connect(' mongodb://heroku_fn781t2v:1gag9bqvl00p128lv11bkjghm@ds231658.mlab.com:31658/heroku_fn781t2v');
+//mongoose.connect(' mongodb://heroku_fn781t2v:1gag9bqvl00p128lv11bkjghm@ds231658.mlab.com:31658/heroku_fn781t2v');
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/dbNews";
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI, {
+ useMongoClient: true
+});
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
