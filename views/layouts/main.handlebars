@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang ="en">
+  <head>
+     <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    {{!-- Materialize Icons --}}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    {{!-- Google Font --}}
+    <link href="https://fonts.googleapis.com/css?family=Dhurjati|Rammetto+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Scrape the News</title>
+  </head>
+  <body>
+
+    <nav>
+      <div class="nav-wrapper brown">
+        <a href="/" class="brand-logo center">Scrape The News</a>
+        <ul class="left" id="nav-mobile">
+          <li><a href="/savedArticle">Saved Articles</a></li>
+        </ul>
+        <ul class="right" id="nav-mobile">
+          <li><a href="/scrape">Scrape</a></li>
+          <li><a href="/deleted">Show Deleted Articles</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <main>
+      <div class="container">
+        {{{ body }}}
+      </div>
+    </main>
+
+    <footer class="page-footer brown">
+      <div class="footer-copyright brown">
+        <div class="container">
+          All articles belong to <a href='https://www.nytimes.com/' target="_blank">New York Times</a>
+          <a class="grey-text right" href="/articles-json">Article JSON</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+  </body>
+<html>

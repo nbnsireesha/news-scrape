@@ -1,0 +1,95 @@
+body{
+  background: url('https://cdn.pixabay.com/photo/2018/02/06/14/09/plaster-3134834__340.jpg') repeat;
+  background-size: 600px;
+  font-family: 'Rammetto One', cursive;
+  font-family: 'Dhurjati', sans-serif;
+  font-size: 16px;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main{
+  flex: 1 0 auto;
+}
+.btnsinline{
+  display: inline-block;
+}
+
+.brand-logo{
+  font-family: 'Rammetto One', cursive;
+}
+
+#deletebutt{
+
+  height: 20px;
+  padding-top: 0px;
+  width: 40px;
+  border: 0;
+  top: -30px;
+
+}
+
+.articleTitle{
+  line-height: 52px;
+  align-content: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #D7CCC8;
+  font-size: 28px;
+}
+
+.articleBody{
+  height: auto;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+.commenting{
+  min-height: 200px;
+}
+
+.formfields{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#nameComment{
+  
+  font-weight: bold;
+  background: #8d6e63;
+  padding-left: 10px;
+  color: white;
+}
+
+#comment{
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+#commentHeading{
+  background-color: #8d6e63;
+}
+
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  padding-left: 20px;
+ color: #e91e63;
+}
+/* label underline focus color 
+/*.input-field input[type=text]:focus {
+ border-bottom: 1px solid #e91e63;
+ box-shadow: 0 1px 0 0 #000;
+}
+/* icon prefix focus color */
+/*.input-field .prefix.active {
+ color: #ec407a;
+}*/
+
+.scrapeText{
+  background: #D7DBDD;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 26px;
+  line-height: 45px;
+}

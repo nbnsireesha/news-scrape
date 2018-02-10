@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col s2"></div>
+  <div class ="col s8 left-align">
+    {{#each articles}}
+      <div class="card-panel">
+        <h4>{{this.title}}</h4>
+        {{!-- goes to article.handlebars --}}
+        <a href = "/readArticle/{{this._id}}" class="waves-effect waves-light btn brown lighten-1" id="btnSignUp">Read Article</a>
+        <!-- <a href = "/deleteArticle/{{this._id}}" class="waves-effect waves-light btn brown lighten-1" id="btnSignUp">Delete Article</a> -->
+        <form action="/deleteArticle/{{this._id}}" method="POST">
+
+          <input class="btn add-comment-button brown lighten-1" type="submit" value="Delete">
+          
+        </form>
+      </div>
+    {{/each}}
+  </div>
+</div>

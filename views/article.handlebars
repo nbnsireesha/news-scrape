@@ -1,0 +1,53 @@
+<div class="row"> 
+  <h3 class="card articleTitle">{{article.title}}</h3>
+  <h5 class="card-panel articleBody">{{body}}</h5>
+  
+</div>
+
+
+<div class="row">
+  <div class="col s2"></div>
+   <form action="/comment/{{article._id}}" method="POST" class="card-panel col s8 commenting">
+    <p id="commentHeading">Comment on this Article:</p>
+      <div class="row">
+        <div class="input-field">
+          <input id="icon_prefix" type="text" placeholder="Name" name="name" class="validate active formfields formInput">
+        </div>
+        <div class="input-field">
+          <input id="icon_telephone" type="text" placeholder="Comment" name="comment" class="validate active formfields formInput">
+        </div>
+      </div>
+       <!-- Submit Button -->
+      <div class="row">
+        <div class="input-field">
+        <center><input class="btn add-comment-button brown lighten-1" type="submit" value="Submit"></center>
+        </div>
+      </div>
+    </form>
+</div>
+
+{{!-- comments go here --}}
+<div class="row">
+  <div class="col s2"></div>
+    <div class="col s8">
+      <h5>Comments:</h5>
+        {{#if article.comment}}
+          {{#each article.comment}}
+            <div class="card">
+              <p id="nameComment">{{name}}
+                
+                <form action="/deleteComment/{{this._id}}" method="POST">
+
+                  <button class="glyphicon glyphicon-remove right red" id="deletebutt"></button>
+                  
+                </form>
+
+              </p>
+              <p id= "comment">{{body}}<p>
+            </div>
+          {{/each}}
+          {{else}}
+          <p>No Comments Yet.</p>
+        {{/if}}
+    </div>
+</div>
